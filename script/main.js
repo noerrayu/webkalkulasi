@@ -1,26 +1,22 @@
-{
-    $("select").on("click", function () {
+function calc() {
+    var n1 = parseFloat(document.getElementById('n1').value);
+    var n2 = parseFloat(document.getElementById('n2').value);
 
-        $(this).parent(".custom-select").toggleClass("open");
+    var oper = document.getElementById('operators').value;
 
-    });
+    if (oper === '+') {
+        document.getElementById('result').value = n1 + n2;
+    }
 
-    $(document).mouseup(function (e) {
-        var container = $(".custom-select");
+    if (oper === '-') {
+        document.getElementById('result').value = n1 - n2;
+    }
 
-        if (container.has(e.target).length === 0) {
-            container.removeClass("open");
-        }
-    });
+    if (oper === '/') {
+        document.getElementById('result').value = n1 / n2;
+    }
 
-
-    $("select").on("change", function () {
-
-        var selection = $(this).find("option:selected").text(),
-            labelFor = $(this).attr("id"),
-            label = $("[for='" + labelFor + "']");
-
-        label.find(".selection-choice").html(selection);
-
-    });
+    if (oper === 'x') {
+        document.getElementById('result').value = n1 * n2;
+    }
 }
