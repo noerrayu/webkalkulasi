@@ -34,7 +34,7 @@
     width: 50px;
     height: 100%;
     line-height: 38px;
-    content: "∨";
+    content: "▼";
     text-align: center;
     color: #714BB9;
     font-size: 24px;
@@ -93,6 +93,7 @@ body {
     background: #F8F8F8;
 }
 
+
 /* Responsive */
 
 @media (max-width: 767px) {
@@ -125,6 +126,7 @@ body {
     }
 
     .fl-table tbody {
+
         width: auto;
         position: relative;
         overflow-x: auto;
@@ -173,4 +175,21 @@ body {
         display: block;
         text-align: center;
     }
+}
+
+.result {
+    background-color: changeColor();
+    border-color: #714BB9;
+}
+
+.input {
+    border-color: #714BB9;
+}
+
+.whiteBox {
+    background-color: white;
+}
+
+.redBox {
+    background-color: #ff0000;
 }
